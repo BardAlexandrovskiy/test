@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint src/*.{js,jsx} --fix",
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "build": "rm -rf dist && parcel build ./src/index.html --public-url /test && cp ./dist/index.html ./dist/404.html",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,15 +25,15 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "eslint": "^5.3.0",
-    "prettier": "^1.18.2",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "pre-commit": "^1.2.2"
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.0.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2"
   },
-  "pre-commit": [
-    "lint"
-  ]
+  "pre-commit": []
 }

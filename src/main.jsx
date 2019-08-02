@@ -7,7 +7,7 @@ export default class Main extends React.Component {
     super(props);
     this.state = {
       slidePosition: 0,
-      active: ''
+      active: '',
     };
     this.toggleSlideClick = this.toggleSlideClick.bind(this);
   }
@@ -27,7 +27,7 @@ export default class Main extends React.Component {
     const { slidePosition } = this.state;
     this.setState({
       slidePosition: slidePosition < 400 ? slidePosition + 100 : 0,
-      active: ' active'
+      active: ' active',
     });
   }
 
