@@ -17,10 +17,5 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {
-    "no-restricted-syntax": "off",
-    "no-console": "off",
-    "no-alert": "off",
-    "no-restricted-globals": "off"
-  }
+  "rules": {}
 }

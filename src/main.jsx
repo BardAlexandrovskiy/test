@@ -12,15 +12,15 @@ export default class Main extends React.Component {
     this.toggleSlideClick = this.toggleSlideClick.bind(this);
   }
 
-  startToggleSlideAuto() {
-    this.timerID = setInterval(() => this.toggleSlideAuto(), 4000);
+  componentDidMount() {
+    this.startToggleSlideAuto();
     setTimeout(() => {
       this.setState({ active: ' active' });
     }, 10);
   }
 
-  componentDidMount() {
-    this.startToggleSlideAuto();
+  startToggleSlideAuto() {
+    this.timerID = setInterval(() => this.toggleSlideAuto(), 4000);
   }
 
   toggleSlideAuto() {
